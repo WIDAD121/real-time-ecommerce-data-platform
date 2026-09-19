@@ -39,6 +39,7 @@ tables = {
     "olist_order_items_dataset.csv": "order_items",
     "olist_order_payments_dataset.csv": "payments",
     "olist_order_reviews_dataset.csv": "reviews",
+    "product_category_name_translation.csv": "category_translation",
 }
 
 
@@ -82,7 +83,7 @@ def load_table(filename, table_name):
     if not file_path.exists():
         raise FileNotFoundError(f"File not found: {file_path}")
 
-    df = pd.read_csv(file_path)
+    df = pd.read_csv(file_path, encoding="utf-8-sig")
 
     print(f"Rows: {len(df):,}")
     print(f"Columns: {len(df.columns)}")
