@@ -1,9 +1,0 @@
-==================================================
-Traceback (most recent call last):
-  File "C:\Users\widad\real-time-ecommerce-data-platform\src\ingestion\load_to_postgres.py", line 82, in <module>
-    print("Olist \u2192 PostgreSQL Data Ingestion")
-    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\widad\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
-    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
-           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 6: character maps to <undefined>

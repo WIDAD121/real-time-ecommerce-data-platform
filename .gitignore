@@ -8,4 +8,4 @@ data/raw/
 data/processed/
 
 .ipynb_checkpoints/
-.vscode/
+.vscode/*.txt 
