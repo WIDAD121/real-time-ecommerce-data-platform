@@ -32,6 +32,12 @@ CREATE TABLE IF NOT EXISTS products (
     product_width_cm NUMERIC
 );
 
+-- translation
+CREATE TABLE IF NOT EXISTS category_translation (
+    product_category_name VARCHAR(100) PRIMARY KEY,
+    product_category_name_english VARCHAR(100)
+);
+
 -- Orders
 CREATE TABLE IF NOT EXISTS orders (
     order_id VARCHAR(32) PRIMARY KEY,
@@ -90,7 +96,7 @@ CREATE TABLE IF NOT EXISTS payments (
 
 -- Reviews
 CREATE TABLE IF NOT EXISTS reviews (
-    review_id VARCHAR(32) PRIMARY KEY,
+    review_id VARCHAR(32) NOT NULL,
     order_id VARCHAR(32) NOT NULL,
     review_score INTEGER,
     review_comment_title TEXT,
@@ -101,4 +107,5 @@ CREATE TABLE IF NOT EXISTS reviews (
     CONSTRAINT fk_reviews_order
         FOREIGN KEY (order_id)
         REFERENCES orders(order_id)
+	PRIMARY KEY (review_id, order_id)
 );
