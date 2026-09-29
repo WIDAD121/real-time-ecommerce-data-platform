@@ -104,8 +104,9 @@ CREATE TABLE IF NOT EXISTS reviews (
     review_creation_date TIMESTAMP,
     review_answer_timestamp TIMESTAMP,
 
+    PRIMARY KEY (review_id, order_id),
+
     CONSTRAINT fk_reviews_order
         FOREIGN KEY (order_id)
         REFERENCES orders(order_id)
-	PRIMARY KEY (review_id, order_id)
 );
