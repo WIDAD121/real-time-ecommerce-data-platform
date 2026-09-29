@@ -1,11 +1,12 @@
+import os
 import pytest
 from sqlalchemy import create_engine, text
 
-DATABASE_URL = (
+DATABASE_URL = os.environ.get(
+    "DATABASE_URL",
     "postgresql+psycopg://"
-    "ecommerce_user:ecommerce_password@localhost:5433/ecommerce"
+    "ecommerce_user:ecommerce_password@localhost:5433/ecommerce",
 )
-
 
 @pytest.fixture(scope="module")
 def conn():

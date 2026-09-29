@@ -1,3 +1,4 @@
+import os
 import sys
 from pathlib import Path
 
@@ -18,9 +19,10 @@ DATA_DIR = BASE_DIR / "data" / "raw"
 # DATABASE CONFIGURATION
 # ============================================================
 
-DATABASE_URL = (
+DATABASE_URL = os.environ.get(
+    "DATABASE_URL",
     "postgresql+psycopg://"
-    "ecommerce_user:ecommerce_password@localhost:5433/ecommerce"
+    "ecommerce_user:ecommerce_password@localhost:5433/ecommerce",
 )
 
 engine = create_engine(DATABASE_URL)
