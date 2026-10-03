@@ -1,0 +1,10 @@
+services:
+  metabase:
+    image: metabase/metabase:latest
+    container_name: ecommerce-metabase
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+
+volumes:
+  metabase_data:
