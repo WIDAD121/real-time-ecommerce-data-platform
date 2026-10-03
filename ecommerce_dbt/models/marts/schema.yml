@@ -20,3 +20,12 @@ models:
       - name: revenue
         tests:
           - not_null
+  - name: delivery_performance
+    columns:
+      - name: month
+        tests:
+          - not_null
+          - unique
+      - name: avg_delivery_days
+        tests:
+          - not_null

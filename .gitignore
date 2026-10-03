@@ -9,3 +9,7 @@ data/processed/
 
 .ipynb_checkpoints/
 .vscode/*.txt 
+ecommerce_dbt/target/ 
+ecommerce_dbt/logs/ 
+ecommerce_dbt/target/ 
+ecommerce_dbt/logs/ 
