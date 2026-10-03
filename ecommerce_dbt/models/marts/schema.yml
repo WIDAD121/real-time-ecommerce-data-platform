@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: daily_revenue
+    columns:
+      - name: order_date
+        tests:
+          - not_null
+          - unique
+      - name: revenue
+        tests:
+          - not_null
+
+  - name: category_revenue_en
+    columns:
+      - name: category
+        tests:
+          - not_null
+          - unique
+      - name: revenue
+        tests:
+          - not_null
